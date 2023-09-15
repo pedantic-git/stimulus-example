@@ -5,19 +5,11 @@
     <div class="cads-grid-row">
       <%# Using the `md` variant here ensures the colum is responsive %>
       <main class="cads-grid-col-md-8">
-        <h1 class="cads-page-title">Hello Design System!</h1>
+        <h1 class="cads-page-title">Stimulus examples</h1>
 
-        <%# See https://citizens-advice-design-system.netlify.app/foundations/typography/ %>
-        <%# Wrap any plain HTML prose text you want to style in a cads-prose class %>
         <div class="cads-prose">
-          <p>Thanks for following along with the design system guide</p>
-          <h2>Example components<h2>
-          <p>A callout is included below for reference, try rendering a few other components yourself.</p>
-        </div>
-
-        <%= render CitizensAdviceComponents::Callout.new(type: :standard) do %>
-          <p>This is an example callout</p>
-        <% end %>
+          <h2>Disclosure</h2>
+          <%= render 'disclosure' %>
       </main>
     </div>
   </div>
