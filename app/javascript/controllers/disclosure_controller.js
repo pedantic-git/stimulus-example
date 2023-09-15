@@ -1,7 +1,10 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
+  static classes = [ "enabled" ]
+
   connect() {
-    this.element.textContent = "Hello World!"
+    console.log("Hi")
+    this.element.classList.add(this.enabledClass)
   }
 }
