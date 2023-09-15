@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@citizensadvice/design-system@5.5.0":
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/@citizensadvice/design-system/-/design-system-5.5.0.tgz#ce577855ba57c071b5adb1f4fc8e7139401f2825"
+  integrity sha512-U7IoWVggMkHVhjHX0++20dELJZLdyYo7GC9mrtc7JEbMwtjpv+z2//WOaKulfD1VbUqucdzYtcrD4Pyw0IAuTA==
+
 "@esbuild/android-arm64@0.19.3":
   version "0.19.3"
   resolved "https://registry.yarnpkg.com/@esbuild/android-arm64/-/android-arm64-0.19.3.tgz#91a3b1b4a68c01ffdd5d8ffffb0a83178a366ae0"

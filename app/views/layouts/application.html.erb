@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<%# The `no-js class` is required by the Design System styles %>
+<html class="no-js" lang="<%= I18n.locale %>">
   <head>
-    <title>StimulusExample</title>
+    <meta charset="utf-8" />
+    <title>Stimulus example</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%# Adding `media: "all"` to the stylesheet allows inline print styles to be loaded %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-  </head>
 
+    <%# Pre-loading the Design System fonts can help with flash of unstyled text %>
+    <link href="/assets/fonts/open-sans-v26-latin-700.woff2" rel="preload" as="font" type="font/woff2" crossorigin="true" />
+    <link href="/assets/fonts/open-sans-v26-latin-regular.woff2" rel="preload" as="font" type="font/woff2" crossorigin="true" />
+    <link href="/assets/fonts/cads.woff" rel="preload" as="font" type="font/woff" crossorigin="true" />
+
+    <%# This script pairs with the no-js class on the HTML element and is needed for fallback styles. %>
+    <script>document.querySelector('html').classList.remove('no-js');</script>
+  </head>
   <body>
-    <%= yield %>
+    <%# This ID is required when using the skip links provided by the header component %>
+    <div id="cads-main-content"><%= yield %></div>
   </body>
 </html>
