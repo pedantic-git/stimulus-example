@@ -1,4 +1,4 @@
-<%# The cads-page-content container represents the main page wrapper %>
+<%# The cads-page-content represents the main page wrapper %>
 <div class="cads-page-content">
   <%# See https://citizens-advice-design-system.netlify.app/foundations/grid/ %>
   <div class="cads-grid-container">
@@ -6,6 +6,18 @@
       <%# Using the `md` variant here ensures the colum is responsive %>
       <main class="cads-grid-col-md-8">
         <h1 class="cads-page-title">Hello Design System!</h1>
+
+        <%# See https://citizens-advice-design-system.netlify.app/foundations/typography/ %>
+        <%# Wrap any plain HTML prose text you want to style in a cads-prose class %>
+        <div class="cads-prose">
+          <p>Thanks for following along with the design system guide</p>
+          <h2>Example components<h2>
+          <p>A callout is included below for reference, try rendering a few other components yourself.</p>
+        </div>
+
+        <%= render CitizensAdviceComponents::Callout.new(type: :standard) do %>
+          <p>This is an example callout</p>
+        <% end %>
       </main>
     </div>
   </div>

@@ -1,3 +1,14 @@
+GIT
+  remote: https://github.com/citizensadvice/design-system.git
+  revision: ff6d8282e957bdadde0b1c053bfa84b61fc1b717
+  tag: v5.5.0
+  glob: engine/*.gemspec
+  specs:
+    citizens_advice_components (0.1.0)
+      actionpack (>= 6.0.0, < 8.0)
+      railties (>= 6.0.0, < 8.0)
+      view_component (>= 2.0.0, < 4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -197,6 +208,10 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    view_component (3.6.0)
+      activesupport (>= 5.2.0, < 8.0)
+      concurrent-ruby (~> 1.0)
+      method_source (~> 1.0)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -216,6 +231,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   capybara
+  citizens_advice_components!
   cssbundling-rails
   debug
   jbuilder
